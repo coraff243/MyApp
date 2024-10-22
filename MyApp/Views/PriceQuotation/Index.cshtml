@@ -1,0 +1,34 @@
+﻿@model MyApp.Models.PriceQuotation
+@using System.Globalization
+@{
+    var kenyanCulture = new CultureInfo("en-KE");  // changing from usd to kenyan
+}
+
+
+@{
+    Layout = "_Layout";  // Use the shared layout
+}
+
+
+<form method="post" asp-action="Calculate">
+    <div>
+        <label for="subtotal">Subtotal:</label>
+        <input type="number" asp-for="Subtotal" step="0.01" required />
+    </div>
+    <div>
+        <label for="discountPercent">Discount percent:</label>
+        <input type="number" asp-for="DiscountPercent" step="0.01" required min="0" max="100" />
+    </div>
+
+    <div>
+        <button type="submit">Calculate</button>
+        <a href="@Url.Action("Index", "PriceQuotation")">Clear</a>
+    </div>
+
+    @if (Model.Subtotal > 0 && Model.DiscountPercent >= 0)
+    {
+        <h3>Results:</h3>
+        <p>Discount amount: @Model.DiscountAmount.ToString("C" ,kenyanCulture)</p>
+        <p>Total: @Model.Total.ToString("C", kenyanCulture)</p>
+    }
+</form>

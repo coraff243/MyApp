@@ -1,0 +1,112 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/*body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Form container styling */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+    /* Form elements */
+    form div {
+        margin-bottom: 15px;
+    }
+
+    form label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    form input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+        form input[type="number"]:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+/* Results section styling */
+h3 {
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Link styling */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
